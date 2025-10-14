@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aframe-extras@6.1.1/dist/aframe-extras.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+  <a-assets timeout="30000">
+    <a-asset-item id="avatar" src="https://cdm.jsdelivr.net/gh/DanielBlancasJimenez/Animation@main/Index(1).glb"></a-asset-item>
+  </a-assets>
+
+  <a-camera position="0 1.2 0"></a-camera>
+
+  <!-- 2D environment omitted for simplicity -->
+
+  <a-entity id="dino" position="-1 0 -3" scale="5 5 5">
+    <a-entity position="0 2.15 0" rotation="0 55 0"
+              gltf-model="avatar"
+              animation-mixer
+              shadow="cast: true; receive: false"></a-entity>
+  </a-entity>
+
+  <!-- Lights configuration omitted for simplicity -->
+</a-scene>
+  </body>
+</html>
