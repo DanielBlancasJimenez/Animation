@@ -2,19 +2,25 @@
 <html>
 <head>
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v7.2.0/dist/aframe-extras.min.js"></script> 
 </head>
 <body>
     <a-scene>
         <a-assets>
-            <a-asset-item id="miAvatarGLB" src="https://models.readyplayer.me/68ee02040823a207ba59adc4.glb"></a-asset-item>
+            <a-asset-item id="avatarAnimado" 
+                src="https://github.com/DanielBlancasJimenez/Animation/raw/refs/heads/main/Salute.glb">
+            </a-asset-item>
         </a-assets>
 
         <a-entity id="rig" movement-controls="speed: 0.1">
-            <a-camera></a-camera>
+            <a-camera position="0 1.6 0"></a-camera>
             
-            <a-gltf-model src="#miAvatarGLB" 
-                          position="0 -0.8 0" 
-                          scale="1 1 1">
+            <a-gltf-model src="#avatarAnimado" 
+                          position="0 0 0" 
+                          scale="1 1 1"
+                          rotation="0 180 0"
+                          
+                          animation-mixer="clip: Salute; loop: repeat"> 
             </a-gltf-model>
         </a-entity>
 
